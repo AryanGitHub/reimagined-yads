@@ -78,25 +78,26 @@ char* getPathToFile(char* name_of_file, char* path_to_directory)
     return path;
 }
 
-int createFileIfItDoesntExist(char* name_of_file , char* path_to_file){
-    char* pathToFile = getPathToFile(name_of_file, path_to_file);
+char* createFileIfItDoesntExist(char* name_of_file , char* path_to_dir){
+    char* pathToFile = getPathToFile(name_of_file, path_to_dir);
     if (isFileExists (pathToFile)){
         printf("%s file already exists\n",name_of_file);
-        return 0;
+        return NULL;
     }
     else {
         // creating the file
         FILE* file = fopen(pathToFile, "w");
         if (file == NULL) {
             printf("%s file not created\n",name_of_file);
-            return 0;
+            fclose(file);
+            return NULL;
         }
         else {
             printf("%s file created\n",name_of_file);
-            return 1;
+            fclose(file);
+            return pathToFile;
         }
-        fclose(file);
-        free(pathToFile);
+        
     }
 }
 
