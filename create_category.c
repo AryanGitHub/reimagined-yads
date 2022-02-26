@@ -11,6 +11,12 @@ void createNewCategory(char* name_of_catagory, char* path_to_catagory)
 {
 
     char* pathToCatagoryDir = createFolderIfItDoesntExist(name_of_catagory, path_to_catagory);
+
+    if (pathToCatagoryDir == NULL)
+    {
+        printf("Error: Could not create catagory\n");
+        return;
+    }
     createFileIfItDoesntExist("list_of_lists.txt", pathToCatagoryDir);   
     createFileIfItDoesntExist("user_added_list_of_url.txt", pathToCatagoryDir);
     char* pathToDownloadListsDir = createFolderIfItDoesntExist("downloadLists", pathToCatagoryDir);
