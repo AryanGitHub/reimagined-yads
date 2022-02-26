@@ -20,12 +20,14 @@ void createInitDirStructure(char* root_directory){
     
     char* pathToFinal_lists = createFolderIfItDoesntExist("final_lists", pathToYads_config);
    
-    createFileIfItDoesntExist("config_settings", pathToYads_config);
+    char* pathToConfig_settings = createFileIfItDoesntExist("config_settings", pathToYads_config);
 
     free (pathToYads_config);
     free (pathToDownloaded_files);
     free (pathToCategories);
     free (pathToLogs);
     free (pathToFinal_lists);
+    free (pathToConfig_settings);
+
 
 }
