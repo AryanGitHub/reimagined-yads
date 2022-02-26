@@ -8,7 +8,7 @@ project(yads VERSION 1.0)
 
 add_subdirectory(libs/FileIO)
 
-add_executable(${PROJECT_NAME} main.c init.c)
+add_executable(${PROJECT_NAME} main.c init.c create_category.c)
 
 
 find_package(CURL REQUIRED)
