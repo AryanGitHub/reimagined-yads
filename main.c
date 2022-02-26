@@ -30,12 +30,7 @@ int main(int argc, char *argv[])
             }
         }
 
-        else {
-            printf("Error: Invalid arguments.\n");
-            return 1;
-        }
-
-    if (strcmp(argv[1] , "newCategory") == 0){
+        else if (strcmp(argv[1] , "newCategory") == 0){
 
             printf("newCategory called\n");
         
