@@ -1,0 +1,1 @@
+add_library(categoryStructHandling categoryStructHandling.c)
