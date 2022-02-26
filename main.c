@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         
             if (argc ==3){
 
-             createNewCategory(argv[2],"/etc/yads_config/catagories");  //argv[2] is the name of the category
+             createNewCategory(argv[2],"/etc/yads_config/categories");  //argv[2] is the name of the category
                 
                 return 0;
             }
