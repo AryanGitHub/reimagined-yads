@@ -2,6 +2,15 @@
 #include "categoryStructHandling.h"
 
 
+category_struct newCategoryStruct (category_struct* cs , char* name, uint32_t UID){
+    strcpy(cs->category_name, name);
+    cs->category_unique_ID = UID;
+    cs->created_unix_time = time(NULL);
+    cs->last_modified_unix_time = time(NULL);
+
+    return *cs;
+}
+
 int structWriter (void* data, char* filename, size_t size) {
     FILE* fp;
     fp = fopen(filename, "w");

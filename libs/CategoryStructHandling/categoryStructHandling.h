@@ -11,6 +11,7 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <unistd.h>
+#include <time.h>
 
 
 
@@ -20,7 +21,7 @@ char category_name[500];
 time_t created_unix_time, last_modified_unix_time, last_download_unix_time;
 }category_struct;
 
-
+category_struct newCategoryStruct (category_struct* cs , char* name, uint32_t UID);
 int structWriter (void* data, char* filename, size_t size);
 category_struct* structReader (category_struct* category_struct_pointer,char* filename); 
 
