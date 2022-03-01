@@ -13,7 +13,7 @@ category_struct newCategoryStruct (category_struct* cs , char* name, uint32_t UI
 
 int structWriter (void* data, char* filename, size_t size) {
     FILE* fp;
-    fp = fopen(filename, "w");
+    fp = fopen(filename, "wb");
     if (fp == NULL) {
         printf("Error opening file %s\n", filename);
         return 1;
@@ -26,7 +26,7 @@ int structWriter (void* data, char* filename, size_t size) {
 
 category_struct* structReader (category_struct* category_struct_pointer,char* filename) {
     FILE* fp;
-    fp = fopen(filename, "r");
+    fp = fopen(filename, "rb");
     if (fp == NULL) {
         printf("Error opening file %s\n", filename);
         return NULL;
