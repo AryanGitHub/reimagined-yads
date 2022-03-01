@@ -6,7 +6,7 @@
 #include <dirent.h>
 #include <unistd.h>
 
-#include "libfileio.h"
+#include "libFileIO.h"
 
 
 int isFileExists(char *path){

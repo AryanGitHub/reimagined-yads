@@ -6,7 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "FileIO/libfileio.h"
+#include "FileIO/libFileIO.h"
 #include "categoryStructHandling.h"
 void createNewCategory(char* name_of_catagory, char* path_to_catagory);
 

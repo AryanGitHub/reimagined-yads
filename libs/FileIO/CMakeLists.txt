@@ -1,1 +1,1 @@
-add_library(libfileio libfileio.c)
+add_library(libFileIO libFileIO.c)
