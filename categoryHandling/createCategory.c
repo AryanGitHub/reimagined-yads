@@ -1,11 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 
-#include "libs/FileIO/libfileio.h"
-#include "libs/CategoryStructHandling/categoryStructHandling.h"
-#include "create_category.h"
+#include "createCategory.h"
 
 void createNewCategory(char* name_of_catagory, char* path_to_catagory)
 {

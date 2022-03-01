@@ -2,7 +2,8 @@
 #include <string.h>
 
 #include "init.h"
-#include "create_category.h"
+#include "categoryHandling/createCategory.h"
+
 // get user arguments in int main
 int main(int argc, char *argv[])
 {
