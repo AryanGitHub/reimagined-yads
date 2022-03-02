@@ -4,13 +4,13 @@
 #include "FileIO/libFileIO.h"
 
 
-static char* PARENT_DIR = "/etc/";
-static char* BASE_DIR ;
-static char* DOWNLOADED_FILES_DIR ;
-static char* CATEGORIES_DIR ;
-static char* LOGS_DIR ;
-static char* FINAL_LISTS_DIR ;
-static char* CONFIG_SETTINGS_FILE ;
+char* PARENT_DIR = "/etc/";
+char* BASE_DIR ;
+char* DOWNLOADED_FILES_DIR ;
+char* CATEGORIES_DIR ;
+char* LOGS_DIR ;
+char* FINAL_LISTS_DIR ;
+char* CONFIG_SETTINGS_FILE ;
 
 void init_directoryVariables();
 
