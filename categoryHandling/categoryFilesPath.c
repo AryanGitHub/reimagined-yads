@@ -1,4 +1,5 @@
 #include "categoryFilesPath.h"
+extern char* CATEGORIES_DIR;
 
 char* getPathToCategoryDir(char* categoryName) {
     char* path = getPathToFile (categoryName, CATEGORIES_DIR);

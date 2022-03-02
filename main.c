@@ -6,6 +6,8 @@
 #include "categoryHandling/userAddedListOfURLsHandling.h"
 #include "directoryVariables.h"
 
+extern char* PARENT_DIR;
+extern char* CATEGORIES_DIR;
 // get user arguments in int main
 int main(int argc, char *argv[])
 {
