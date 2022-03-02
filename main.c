@@ -3,6 +3,7 @@
 
 #include "init.h"
 #include "categoryHandling/createCategory.h"
+#include "directoryVariables.h"
 
 // get user arguments in int main
 int main(int argc, char *argv[])
@@ -22,7 +23,7 @@ int main(int argc, char *argv[])
         
             if (argc ==2){
 
-                createInitDirStructure("/etc/");
+                createInitDirStructure(PARENT_DIR);
                 return 0;
             }
             else{
@@ -37,7 +38,7 @@ int main(int argc, char *argv[])
         
             if (argc ==3){
 
-             createNewCategory(argv[2],"/etc/yads_config/categories");  //argv[2] is the name of the category
+             createNewCategory(argv[2],CATEGORIES_DIR);  //argv[2] is the name of the category
                 
                 return 0;
             }
