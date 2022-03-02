@@ -4,5 +4,5 @@
 
 #include <stdio.h>
 
-int appendStringListToFile(char *filePath, char **list);
+int appendListToFile(char *filePath, char** list, int numberOfItems);
 #endif // LIB_LIST_FILE_IO_H

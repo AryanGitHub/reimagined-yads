@@ -3,12 +3,15 @@
 
 #include "FileIO/libFileIO.h"
 
-const char* PARENT_DIR = "/etc/";
-const char* BASE_DIR = getPathToFile (PARENT_DIR, "yads_config");
-const char* DOWNLOADED_FILES_DIR = getPathToFile (BASE_DIR, "downloaded_files");
-const char* CATEGORIES_DIR = getPathToFile (BASE_DIR, "categories");
-const char* LOGS_DIR = getPathToFile (BASE_DIR, "logs");
-const char* FINAL_LISTS_DIR = getPathToFile (BASE_DIR, "final_lists");
-const char* CONFIG_SETTINGS_FILE = getPathToFile (BASE_DIR, "config_settings");
+
+static char* PARENT_DIR = "/etc/";
+static char* BASE_DIR ;
+static char* DOWNLOADED_FILES_DIR ;
+static char* CATEGORIES_DIR ;
+static char* LOGS_DIR ;
+static char* FINAL_LISTS_DIR ;
+static char* CONFIG_SETTINGS_FILE ;
+
+void init_directoryVariables();
 
 #endif // DIRECTORY_VARIABLES_H

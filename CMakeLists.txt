@@ -11,8 +11,8 @@ add_subdirectory(libs/ListFileIO)
 
 find_package(CURL REQUIRED)
 
-include_directories(${CURL_INCLUDE_DIR} libs)
+include_directories(${CURL_INCLUDE_DIR} libs ${PROJECT_SOURCE_DIR})
 
-add_executable(${PROJECT_NAME} main.c init.c categoryHandling/createCategory.c categoryHandling/categoryStructHandling.c)
+add_executable(${PROJECT_NAME} main.c directoryVariables.c init.c categoryHandling/createCategory.c categoryHandling/categoryStructHandling.c categoryHandling/userAddedListOfURLsHandling.c categoryHandling/categoryFilesPath.c)
 
 target_link_libraries(${PROJECT_NAME} ${CURL_LIBRARIES} libFileIO libListFileIO)
