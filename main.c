@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
             printf("newCategory called\n");
         
             if (argc ==3){
-
+             printf("%s\n",CATEGORIES_DIR);
              createNewCategory(argv[2],CATEGORIES_DIR);  //argv[2] is the name of the category
                 
                 return 0;
