@@ -4,6 +4,7 @@
 #include "init.h"
 #include "categoryHandling/createCategory.h"
 #include "categoryHandling/userAddedListOfURLsHandling.h"
+#include "categoryHandling/listofListsHandling.h"
 #include "directoryVariables.h"
 
 extern char* PARENT_DIR;
@@ -69,6 +70,21 @@ int main(int argc, char *argv[])
         } 
 
 
+        else if (strcmp(argv[1] , "addListOfLists") == 0){
+
+            printf("addListOfLists called\n");
+        
+            if (argc > 3){
+                int numberOfURLs = argc - 3;
+                addListOfLists(&argv[3],  numberOfURLs, argv[2]);
+                return 0;
+            }
+            else{
+                printf("Error: Invalid arguments.\n");
+                return 1;
+            }
+        } 
+        
         else {
             printf("Error: Invalid arguments.\n");
             return 1;
