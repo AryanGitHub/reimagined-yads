@@ -14,7 +14,7 @@ FILE* getFilePointer (char* filePath) {
 int closeFilePointer (FILE* file) {
         int close = fclose(file);
         if (close == EOF) {
-            fprintf_s(stderr,"ERROR: fclose() not successfully closed the file.\n");
+            fprintf(stderr,"ERROR: fclose() not successfully closed the file.\n");
             return EXIT_FAILURE;
             }
 

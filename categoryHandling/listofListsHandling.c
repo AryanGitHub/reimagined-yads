@@ -6,3 +6,14 @@ int addListOfLists(char **listOfURLs, int numberOfURLs, char* categoryName){
     free (pathToFile);
     return numberOfURLsAppended;
 }
+
+char** getListOfLists (char ***listOfURLs, int *numberOfURLs, char* categoryName){
+    
+    char* pathToFile = getPathToCategoryList_Of_List_File(categoryName);
+    printf("list of lists file path is %s\n",pathToFile); 
+    getListFromFile(listOfURLs, numberOfURLs, pathToFile);
+
+    free (pathToFile);
+    return *listOfURLs;
+    
+}
