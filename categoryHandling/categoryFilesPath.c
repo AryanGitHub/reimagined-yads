@@ -48,7 +48,12 @@ char* getPathToDownload_Lists_Dir(char* categoryName) {
     return path;
 }
 
-
+char* getPathToCompiled_List_Of_URLs(char* categoryName){
+    char* pathToParentDir = getPathToCategoryDir(categoryName);
+    char* path = getPathToFile ("compiled_list_of_urls.txt", pathToParentDir);
+    free(pathToParentDir);
+    return path;
+}
 
 
 

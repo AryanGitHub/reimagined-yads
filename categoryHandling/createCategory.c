@@ -17,6 +17,7 @@ void createNewCategory(char* name_of_category, char* path_to_category)
     char* path_to_hashlists_of_downloads =  createFileIfItDoesntExist("hashlists_of_downloads.txt", pathToCategoryDir);
     char* path_to_map_url_to_files =  createFileIfItDoesntExist("map_url_to_files.txt", pathToCategoryDir);
     char* path_to_category_struct_data = createFileIfItDoesntExist("category_struct_data.txt", pathToCategoryDir);
+    char* path_to_compiled_list_of_urls = createFileIfItDoesntExist("compiled_list_of_urls.txt", pathToCategoryDir);
 
     category_struct newCategory;
     newCategory = newCategoryStruct(&newCategory, name_of_category, 0);//add uid later
@@ -30,6 +31,8 @@ void createNewCategory(char* name_of_category, char* path_to_category)
     free(path_to_hashlists_of_downloads);
     free(path_to_map_url_to_files);
     free(path_to_category_struct_data);
+    free(path_to_compiled_list_of_urls);
+
 
 }
 
