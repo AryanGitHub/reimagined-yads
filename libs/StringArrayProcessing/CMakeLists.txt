@@ -1,0 +1,1 @@
+add_library(libStringArrayHandling libStringArrayHandling.c)

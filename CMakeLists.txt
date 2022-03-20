@@ -10,6 +10,7 @@ add_subdirectory(libs/FileIO)
 add_subdirectory(libs/ListFileIO)
 add_subdirectory(libs/DownloadFile)
 add_subdirectory(libs/URLProcessing)
+add_subdirectory(libs/StringArrayProcessing)
 
 
 find_package(CURL REQUIRED)
@@ -18,4 +19,4 @@ include_directories(${CURL_INCLUDE_DIR} libs ${PROJECT_SOURCE_DIR})
 
 add_executable(${PROJECT_NAME} main.c directoryVariables.c init.c categoryHandling/createCategory.c categoryHandling/categoryStructHandling.c categoryHandling/userAddedListOfURLsHandling.c categoryHandling/categoryFilesPath.c categoryHandling/listOfListsHandling.c categoryHandling/downloadLists.c)
 
-target_link_libraries(${PROJECT_NAME} libFileIO libListFileIO libDownloadFile libURLHandling ${CURL_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} libFileIO libListFileIO libDownloadFile libURLHandling libStringArrayHandling ${CURL_LIBRARIES})
