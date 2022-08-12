@@ -9,14 +9,14 @@ int main(int argc, char *argv[])
     // if there are no arguments, print error message
     if (argc == 1)
     {
-        printf("Error: No arguments given.\n");
+        printf("Error: No arguments were given.\n");
         return 1;
     }
     else {
 
         if (strcmp(argv[1] , "init") == 0){
 
-            printf("init called\n");
+            printf("init is called\n");
         
             if (argc ==2){
 
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
                 return 0;
             }
             else{
-                printf("too many arguments\n");
+                printf("Error: too many arguments\n");
                 return 1;
             }
         }
