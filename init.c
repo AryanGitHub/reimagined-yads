@@ -9,7 +9,7 @@ void createInitDirStructure(char* root_directory){
     char* pathToYads_config = createFolderIfItDoesntExist("yads_config", root_directory);
 
     if (pathToYads_config == NULL){
-        printf("Error creating yads_config folder\n");
+        printf("Warning: Creating yads_config folder.\n");
         exit(1);
     }
     char* pathToDownloaded_files = createFolderIfItDoesntExist("downloaded_files", pathToYads_config);
